@@ -1,0 +1,143 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body Background with subtle gradient */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #F0F4F8, #E2E8F0);
+}
+
+/* Login Container */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Login Card with fade-in animation and hover lift */
+.login-card {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInCard 0.8s forwards;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.login-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+/* Fade-in animation */
+@keyframes fadeInCard {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Title */
+.login-title {
+    color: #0D6EFD; /* Help Connect primary color */
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+/* Input Group */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333333;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #0D6EFD;
+    box-shadow: 0 0 8px rgba(13, 110, 253, 0.3);
+}
+
+/* Forgot Password */
+.forgot-password {
+    display: block;
+    text-align: right;
+    margin-bottom: 20px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #0D6EFD;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* Login Button with subtle hover scale */
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #0D6EFD;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #0B5ED7;
+    transform: scale(1.03);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Signup Text */
+.signup-text {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #555555;
+}
+
+.signup-text a {
+    color: #0D6EFD;
+    text-decoration: none;
+}
+
+.signup-text a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .login-card {
+        padding: 30px 20px;
+    }
+}
